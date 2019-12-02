@@ -22,14 +22,15 @@ public class RetailerServiceImpl implements RetailerService {
 		return dao.register(bean);
 	}
 
-	@Override
-	public RetailerBean searchProduct(int id) {
-		return dao.searchProduct(id);
-	}
 
 	@Override
 	public boolean changePassword(int id, String password) {
 		return dao.changePassword(id, password);
+	}
+
+	@Override
+	public RetailerBean searchProduct(int id) {
+		return null;
 	}
 	
 }

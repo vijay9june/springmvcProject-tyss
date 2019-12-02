@@ -15,7 +15,7 @@ RetailerBean bean =(RetailerBean)session.getAttribute("bean");
 	<a href="logout">Logout</a>
 	<h2>Welcome <%=bean.getName()%></h2>
 	<fieldset>
-		<legend>Search Retailer</legend>
+		<legend>Search Product</legend>
 		<form action="./search">
 			<table>
 				<tr>

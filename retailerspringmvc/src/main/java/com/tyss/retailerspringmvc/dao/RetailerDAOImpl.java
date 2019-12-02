@@ -8,6 +8,8 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 
+import com.tyss.retailerspringmvc.dto.OrderBean;
+import com.tyss.retailerspringmvc.dto.ProductBean;
 import com.tyss.retailerspringmvc.dto.RetailerBean;
 
 @Repository
@@ -50,12 +52,6 @@ public class RetailerDAOImpl implements RetailerDAO {
 	}
 
 	@Override
-	public RetailerBean searchProduct(int id) {
-		EntityManager manager = factory.createEntityManager();
-		return manager.find(RetailerBean.class, id);
-	}
-
-	@Override
 	public boolean changePassword(int id, String password) {
 			EntityManager manager = factory.createEntityManager();
 			EntityTransaction transaction = manager.getTransaction();
@@ -64,6 +60,19 @@ public class RetailerDAOImpl implements RetailerDAO {
 			bean.setPassword(password);
 			transaction.commit();
 			return true;
+	}
+
+
+	@Override
+	public OrderBean DisplayOrder(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProductBean searchProduct(int id) {
+		EntityManager manager = factory.createEntityManager();
+		return manager.find(ProductBean.class, id);
 	}
 
 

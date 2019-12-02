@@ -27,6 +27,6 @@
 		</table>
 	</form>
 </fieldset>
-<a href="./home">Home</a>
+<a href="./register">Click here to Register</a>
 </body>
 </html>
